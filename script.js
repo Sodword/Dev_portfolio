@@ -111,6 +111,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const emptyState = document.querySelector('[data-blog-empty]');
     const categoryFilters = document.querySelector('[data-category-filters]');
     let selectedCategory = 'All';
+    const blogCardObserver = 'IntersectionObserver' in window
+      ? new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            entry.target.classList.toggle('is-visible', entry.isIntersecting);
+          });
+        }, { threshold: 0.15 })
+      : null;
 
     const articleUrl = slug => `blog.html#article/${slug}`;
     const articleMatches = (article, query) => {
@@ -142,7 +149,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const matchesCategory = selectedCategory === 'All' || article.category === selectedCategory || article.tags.includes(selectedCategory);
         return matchesCategory && articleMatches(article, query);
       });
-      blogGrid.innerHTML = visibleArticles.map(article => `<article class="blog-card reveal-item"><div class="article-meta">${metadataMarkup(article)}</div><h3>${article.title}</h3><p>${article.excerpt}</p><div class="article-tags">${tagMarkup(article.tags)}</div>${buttonMarkup(article)}</article>`).join('');
+      blogGrid.innerHTML = visibleArticles.map(article => `<article class="blog-card"><div class="article-meta">${metadataMarkup(article)}</div><h3>${article.title}</h3><p>${article.excerpt}</p><div class="article-tags">${tagMarkup(article.tags)}</div>${buttonMarkup(article)}</article>`).join('');
+      blogGrid.querySelectorAll('.blog-card').forEach(card => blogCardObserver ? blogCardObserver.observe(card) : card.classList.add('is-visible'));
       blogGrid.classList.remove('is-rendered');
       window.requestAnimationFrame(() => blogGrid.classList.add('is-rendered'));
       emptyState.hidden = visibleArticles.length > 0;
