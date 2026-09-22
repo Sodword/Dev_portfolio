@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Dev. Salam</title>
+    <link rel="shortcut icon" href="images/abdulsalam.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+  <div class="wave-section" id="top">
+    <svg class="wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+      <g transform="scale(1,-1) translate(0,-320)">
+        <path fill="#f1f5f7" fill-opacity="1" d="
+          M0,160 C60,100,120,220,180,160 C240,100,300,220,360,160
+          C420,100,480,220,540,160 C600,100,660,220,720,160
+          C780,100,840,220,900,160 C960,100,1020,220,1080,160
+          C1140,100,1200,220,1260,160 C1320,100,1380,220,1440,160
+          V320H0Z">
+        </path>
+      </g>
+    </svg>
+    <div class="wave-text">
+      <div class="wave_img">
+        <img src="images/abdulsalam.png" class="profile">
+      </div>
+      <i class="fa fa-bars menu-toggle" aria-hidden="true"></i>
+      <div class="wave_links">
+        <a href="index.html" >Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="projects.html" class="dot-top">Projects</a>
+        <a href="bits.html">Bits</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-intro page-intro-centered content-section reveal-section">
+      <span class="section-kicker">Selected work</span>
+      <h1>Projects</h1>
+      <p>A growing collection of shipped work, experiments, and the ideas I am developing next.</p>
+    </section>
+
+    <section class="content-section page-content project-showcase reveal-section" aria-label="Project showcase">
+      <article class="featured-project reveal-item" data-project-card data-categories="frontend api backend">
+        <div class="featured-project-preview">
+          <img src="images/Project_one_1.png" alt="Frontend API Integration project preview">
+          <span class="project-status">In Progress</span>
+        </div>
+        <div class="featured-project-content">
+          <span class="section-kicker">Featured project</span>
+          <h2>Frontend API Integration</h2>
+          <p>A focused project for connecting a frontend interface to a real backend API, with clear request states and useful feedback.</p>
+          <div class="card-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>API</span></div>
+          <div class="card-links">
+            <button class="project-link is-disabled" type="button" disabled>Live Demo</button>
+            <button class="project-link is-disabled" type="button" disabled>GitHub</button>
+            <button class="project-link project-link-secondary" type="button" data-case-study-open>View Case Study</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="case-study" data-case-study hidden>
+        <div class="case-study-header">
+          <div>
+            <span class="section-kicker">Case study</span>
+            <h2>Frontend API Integration</h2>
+          </div>
+          <button class="case-study-close" type="button" data-case-study-close aria-label="Close case study">&times;</button>
+        </div>
+        <div class="case-study-grid">
+          <div class="case-study-copy">
+            <h3>Project overview</h3>
+            <p>A learning project about building a dependable connection between a browser interface and a backend service.</p>
+            <h3>What I wanted to build</h3>
+            <p>I wanted a frontend experience that could request real data, communicate progress, and stay useful when something went wrong.</p>
+            <h3>Problem and goal</h3>
+            <p>The goal was to understand the request and response cycle instead of treating an API as a black box.</p>
+            <h3>My approach</h3>
+            <p>I separated request handling from presentation, checked the response shape, and designed clear idle, loading, success, and error states.</p>
+          </div>
+          <div class="case-study-copy">
+            <h3>Technologies used</h3>
+            <div class="card-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Express</span><span>Supabase</span></div>
+            <h3>Challenges</h3>
+            <p>Making failure states as intentional as the successful response was the main challenge. It required testing beyond the first working request.</p>
+            <h3>What I learned</h3>
+            <p>I learned to inspect real data, handle uncertainty explicitly, and keep technical details in the console while the interface remains calm.</p>
+            <h3>Final result</h3>
+            <p>A practical foundation for API-powered interfaces, with a clearer understanding of how frontend and backend responsibilities meet.</p>
+            <div class="card-links case-study-links">
+              <button class="project-link is-disabled" type="button" disabled>Live Demo</button>
+              <button class="project-link is-disabled" type="button" disabled>GitHub repository</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-discovery">
+        <div>
+          <span class="section-kicker">Browse the collection</span>
+          <h2>Find something useful.</h2>
+        </div>
+        <div class="project-filters" role="group" aria-label="Filter projects">
+          <button class="filter-button is-active" type="button" data-project-filter="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-project-filter="frontend" aria-pressed="false">Frontend</button>
+          <button class="filter-button" type="button" data-project-filter="api" aria-pressed="false">API</button>
+          <button class="filter-button" type="button" data-project-filter="backend" aria-pressed="false">Backend</button>
+        </div>
+      </div>
+
+      <div class="portfolio-grid project-cards" data-project-grid>
+        <article class="portfolio-card reveal-item" data-project-card data-categories="frontend">
+          <img src="images/Project_one_1.png" alt="Personal portfolio website preview">
+          <div class="card-content">
+            <span class="project-type">Frontend</span><span class="project-status">Completed</span>
+            <h2>Personal Portfolio Website</h2>
+            <p>A responsive portfolio for sharing skills, projects, and a web development journey.</p>
+            <div class="card-tags"><span>JavaScript</span><span>React</span><span>CSS</span></div>
+            <div class="card-links">
+              <a href="http://bigsalamportfolio.netlify.app/" target="_blank" rel="noreferrer">Live Demo</a>
+              <a href="https://github.com/Sodword/BigsalamPort" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal-item" data-project-card data-categories="frontend">
+          <img src="images/Project_two.png" alt="Responsive image gallery preview">
+          <div class="card-content">
+            <span class="project-type">Frontend</span><span class="project-status">Completed</span>
+            <h2>Responsive Image Gallery</h2>
+            <p>A JavaScript gallery with category filtering, image viewing, navigation, and responsive behavior.</p>
+            <div class="card-tags"><span>JavaScript</span><span>Django</span><span>PostgreSQL</span></div>
+            <div class="card-links">
+              <a href="http://sodwordimagegallery.netlify.app/" target="_blank" rel="noreferrer">Live Demo</a>
+              <a href="https://github.com/Sodword/image-gallery" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal-item" data-project-card data-categories="frontend">
+          <img src="images/Project_three.png" alt="JavaScript calculator preview">
+          <div class="card-content">
+            <span class="project-type">Frontend</span><span class="project-status">Learning Project</span>
+            <h2>JavaScript Calculator</h2>
+            <p>A functional calculator with arithmetic operations and a clean, focused interface.</p>
+            <div class="card-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="card-links">
+              <a href="http://sodwordcalculator.netlify.app/" target="_blank" rel="noreferrer">Live Demo</a>
+              <a href="https://github.com/Sodword/Sodwordcalculator" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="empty-state" data-project-empty hidden>No completed projects match this category yet.</p>
+    </section>
+
+    <section class="content-section building-section reveal-section" aria-labelledby="building-title">
+      <div class="building-card reveal-item">
+        <div>
+          <span class="section-kicker">In progress</span>
+          <h2 id="building-title">Currently Building</h2>
+          <p>Real API Integration</p>
+        </div>
+        <span class="project-status">In Progress</span>
+      </div>
+    </section>
+  </main>
+    <footer class="site-footer">
+        <div class="footer-inner"><a class="footer-brand" href="index.html">Dev. Salam</a>
+            <p>Building useful things for the web.</p>
+            <div class="footer-links"><a href="blog.html">Blog</a><a href="bits.html">Bits</a><a
+                    href="contact.html">Contact</a></div>
+            <p class="copyright">&copy; 2026 Salam. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Dev. Salam</title>
+    <link rel="shortcut icon" href="images/abdulsalam.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+<div class="wave-section" id="top">
+  <svg class="wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+    <g transform="scale(1,-1) translate(0,-320)">
+      <path fill="#f1f5f7" fill-opacity="1" 
+        d="
+          M0,160
+          C60,100,120,220,180,160
+          C240,100,300,220,360,160
+          C420,100,480,220,540,160
+          C600,100,660,220,720,160
+          C780,100,840,220,900,160
+          C960,100,1020,220,1080,160
+          C1140,100,1200,220,1260,160
+          C1320,100,1380,220,1440,160
+          V320H0Z
+        ">
+      </path>
+    </g>
+  </svg>
+  <div class="wave-text">
+    <div class="wave_img">
+        <img src="images/abdulsalam.png" class="profile">
+    </div>
+      <i class="fa fa-bars menu-toggle" aria-hidden="true"></i>
+    <div class="wave_links">      
+      <a href="index.html">Home</a>
+      <a href="blog.html" class="dot-top">Blog</a>
+      <a href="projects.html">Projects</a>
+      <a href="bits.html">Bits</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</div>  
+<main>
+  <section class="page-intro content-section reveal-section blog-hero"><span class="section-kicker">From the notebook</span><h1>Thoughts, Lessons &amp; Things I'm Building</h1><p>This is where I share what I learn while building websites, working with React, integrating APIs, and improving as a frontend developer.</p></section>
+  <section class="content-section page-content blog-view reveal-section" aria-label="Blog posts" data-blog-list-view>
+    <div class="featured-article" data-featured-article></div>
+    <div class="blog-toolbar"><div><span class="section-kicker">Browse the notes</span><h2>Recent articles</h2></div><label class="blog-search-label" for="blog-search">Search posts<input id="blog-search" class="content-search" type="search" placeholder="Search titles, tags, or topics" autocomplete="off"></label></div>
+    <div class="category-filters" role="group" aria-label="Filter articles by category" data-category-filters></div>
+    <div class="blog-grid" data-blog-grid></div>
+    <p class="empty-state" data-blog-empty hidden>No articles match that search or category yet.</p>
+  </section>
+  <section class="content-section article-view" aria-label="Blog article" data-blog-article-view hidden></section>
+</main>
+<footer class="site-footer"><div class="footer-inner"><a class="footer-brand" href="index.html">Dev. Salam</a><p>Building useful things for the web.</p><div class="footer-links"><a href="projects.html">Projects</a><a href="bits.html">Bits</a><a href="contact.html">Contact</a></div><p class="copyright">&copy; 2026 Salam. All rights reserved.</p></div></footer>
+<script src="blog-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

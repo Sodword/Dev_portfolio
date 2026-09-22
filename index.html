@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev. Salam Portfolio</title>
+    <link rel="shortcut icon" href="images/abdulsalam.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+<div class="wave-section" id="top">
+  <svg class="wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+    <g transform="scale(1,-1) translate(0,-320)">
+      <path fill="#f1f5f7" fill-opacity="1" 
+        d="
+          M0,160
+          C60,100,120,220,180,160
+          C240,100,300,220,360,160
+          C420,100,480,220,540,160
+          C600,100,660,220,720,160
+          C780,100,840,220,900,160
+          C960,100,1020,220,1080,160
+          C1140,100,1200,220,1260,160
+          C1320,100,1380,220,1440,160
+          V320H0Z
+        ">
+      </path>
+    </g>
+  </svg>
+  <div class="wave-text">
+    <div class="wave_img">
+        <img src="images/abdulsalam.png" class="profile">
+    </div>
+      <i class="fa fa-bars menu-toggle" aria-hidden="true"></i>
+    <div class="wave_links">      
+      <a href="index.html" class="dot-top">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="projects.html">Projects</a>
+      <a href="bits.html">Bits</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="port_hero_section">
+    <div class="hero_text">
+      <h1>Hi, I'm Salam.</h1>
+      <p>I'm a <strong> Web Developer</strong> in <strong>Nigeria</strong>. I like working on the <strong>front-end </strong> of the web. <br>
+        This is my site, where I share my projects, ideas, and whatever I've been building</p>
+    </div>
+    <div class="hero_image">
+         <img src="images/illustration.png" alt="ill">
+    </div>
+  </div>
+
+  <section class="api-test-section" aria-labelledby="api-test-title">
+    <span class="section-kicker">API connection</span>
+    <h2 id="api-test-title">Test my first API</h2>
+    <p>Check that this portfolio can communicate with my local backend.</p>
+    <button type="button" class="primary-button" data-api-test-button>Test API</button>
+    <p class="api-test-result" data-api-test-result role="status" aria-live="polite">Ready to test the API.</p>
+  </section>
+
+
+  <div class="container what-i-do">
+        <h1>WHAT I DO</h1>
+        <p class="intro">
+            I build modern, responsive, and interactive websites focused on great user experiences.
+        </p>
+        <div class="services">
+            <div class="service-item">
+                <div class="number"><i class="fa fa-code"></i></div>
+                <div class="title">Web Development</div>
+                <div class="description">I build functional and responsive websites using modern frontend technologies, with clean and maintainable code.</div>
+            </div>
+            <div class="service-item">
+                <div class="number"><i class="fa fa-mobile"></i></div>
+                <div class="title">Responsive Design</div>
+                <div class="description">I create websites that adapt smoothly to desktops, tablets, and mobile devices for a consistent experience on every screen.</div>
+            </div>
+            <div class="service-item">
+                <div class="number"><i class="fa fa-magic"></i></div>
+                <div class="title">Interactive Experiences</div>
+                <div class="description">I add engaging animations, interactions, and dynamic features that make websites feel modern and enjoyable to use.</div>
+            </div>
+            <div class="service-item">
+                <div class="number"><i class="fa fa-tachometer"></i></div>
+                <div class="title">Website Optimization</div>
+                <div class="description">I focus on performance, usability, accessibility, and clean structure to create websites that are fast and easy to use.</div>
+            </div>
+        </div>
+    </div>
+
+
+  <section class="portfolio-section recent-work">
+    <h2>My Recent Work</h2>
+    <p>A collection of projects I've built to showcase my skills, creativity, and experience in web development.</p>
+   <div class="portfolio-grid">
+    <!-- Card 1 -->
+    <div class="portfolio-card recent-work">
+      <img src="images/Project_one_1.png" alt="Project 1 Thumbnail">
+      <div class="card-content">
+        <h3>Personal Portfolio Website</h3>
+        <p>A responsive personal portfolio website designed to showcase my skills, projects, experience, and web development journey.</p>
+        <div class="card-tags">
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>CSS</span>
+        </div>
+        <div class="card-links">
+          <a href="http://bigsalamportfolio.netlify.app/" target="_blank">Live Demo</a>
+          <a href="https://github.com/Sodword/BigsalamPort" target="_blank">Repository</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="portfolio-card">
+      <img src="images/Project_two.png" alt="Project 2 Thumbnail">
+      <div class="card-content">
+        <h3>Responsive Image Gallery</h3>
+        <p>This is excellent for demonstrating JavaScript interaction. It has category filtering, image viewing, navigation and responsive behavior</p>
+        <div class="card-tags">
+          <span>Js</span>
+          <span>Django</span>
+          <span>PostgreSQL</span>
+        </div>
+        <div class="card-links">
+          <a href="http://sodwordimagegallery.netlify.app/" target="_blank">Live Demo</a>
+          <a href="https://github.com/Sodword/image-gallery" target="_blank">Repository</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="portfolio-card">
+      <img src="images/Project_three.png" alt="Project 3 Thumbnail">
+      <div class="card-content">
+        <h3>JavaScript Calculator</h3>
+        <p>A functional calculator built with JavaScript, featuring arithmetic operations and a clean interface.</p>
+        <div class="card-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+        <div class="card-links">
+          <a href="http://sodwordcalculator.netlify.app/" target="_blank">Live Demo</a>
+          <a href="https://github.com/Sodword/Sodwordcalculator" target="_blank">Repository</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="team-section content-section reveal-section" aria-labelledby="team-title">
+    <div class="team-heading">
+      <span class="section-kicker">Working together</span>
+      <h2 id="team-title">Team &amp; Collaboration</h2>
+      <p>We work together, share ideas, learn from one another, and build thoughtful projects across web development and web design.</p>
+    </div>
+    <div class="team-grid">
+      <article class="team-card reveal-item team-development">
+        <img src="images/abdulsalam.jpg" alt="Abdulsalam Sodiq" loading="lazy" onerror="this.onerror=null; this.src='images/abdulsalam.png';">
+        <div class="team-card-content">
+          <span class="team-role-label">Web Development</span>
+          <h3>Abdulsalam Sodiq</h3>
+          <p class="team-role">Web Developer</p>
+          <p>Contributing to our journey of web development by building responsive and interactive web experiences. I work with the team to share ideas, solve problems, improve my development skills, and turn concepts into functional projects.</p>
+        </div>
+      </article>
+
+      <article class="team-card reveal-item team-development">
+        <img src="images/musbaudeen.jpg" alt="Musbaudeen Shukurah" loading="lazy" onerror="this.onerror=null; this.src='images/team-placeholder.svg';">
+        <div class="team-card-content">
+          <span class="team-role-label">Web Development</span>
+          <h3>Musbaudeen Shukurah</h3>
+          <p class="team-role">Web Developer</p>
+          <p>Working with the team as we continue learning and building with web technologies. Through collaboration, we share ideas, learn from one another, solve development challenges, and gain practical experience by working on real projects together.</p>
+        </div>
+      </article>
+
+      <article class="team-card reveal-item team-development">
+        <img src="images/waliyat.jpeg" alt="Team Member 3" loading="lazy" onerror="this.onerror=null; this.src='images/team-placeholder.svg';">
+        <div class="team-card-content">
+          <span class="team-role-label">Web Development</span>
+          <h3>Waliyat</h3>
+          <p class="team-role">Web Developer</p>
+          <p>Contributing to our shared learning journey by exploring web development and helping turn early ideas into useful digital experiences. This placeholder profile can be updated with a name, image, and personal contribution later.</p>
+        </div>
+      </article>
+
+      <article class="team-card reveal-item team-design">
+        <img src="https://media.licdn.com/dms/image/v2/D4E35AQHXiEMSoNJkeQ/profile-framedphoto-shrink_400_400/B4EaBoNclVH0AU-/0/1788454751039?e=1790611200&v=beta&t=ifgBWHHDPMydBKa3XqcvG-mtSesEdwn5p1awUEgJLys" alt="Team Member 4" loading="lazy" onerror="this.onerror=null; this.src='images/team-placeholder.svg';">
+        <div class="team-card-content">
+          <span class="team-role-label">Web Design</span>
+          <h3>Gideon Obaloluwa</h3>
+          <p class="team-role">Web Designer</p>
+          <p>Helping the team think through layouts, visual direction, and the details that make a web experience easier to use. This placeholder profile can be replaced with the member's name, image, and design focus later.</p>
+        </div>
+      </article>
+
+      <article class="team-card reveal-item team-design">
+        <img src="https://media.licdn.com/dms/image/v2/D4E03AQFXMLMv-h0kWw/profile-displayphoto-scale_400_400/B4EZzHsAliJYAg-/0/1772876732672?e=1791417600&v=beta&t=pVZvhwUJdkP-0WRMQ4P0v_W9nQBgudtAg0s42pBDETE" alt="Team Member 5" loading="lazy" onerror="this.onerror=null; this.src='images/team-placeholder.svg';">
+        <div class="team-card-content">
+          <span class="team-role-label">Web Design</span>
+          <h3>Olabode Kabeerah</h3>
+          <p class="team-role">Web Designer</p>
+          <p>Bringing another perspective to our design discussions as we learn, share ideas, and shape clearer interfaces together. This placeholder profile is ready to be updated when the member's details are available.</p>
+        </div>
+      </article>
+
+      <article class="team-card reveal-item team-design">
+        <img src="https://bigsalamportfolio.netlify.app/images/abbdullahi.avif" alt="Team Member 6" loading="lazy" onerror="this.onerror=null; this.src='images/team-placeholder.svg';">
+        <div class="team-card-content">
+          <span class="team-role-label">Web Design</span>
+          <h3>Abdullahi Sodiq</h3>
+          <p class="team-role">Web Designer</p>
+          <p>Supporting the creative side of our journey by exploring how structure, color, and interaction can work together on the web. This placeholder profile can be replaced with the member's real information later.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="footer-brand" href="index.html">Dev. Salam</a>
+      <p>Building useful things for the web.</p>
+      <div class="footer-links"><a href="blog.html">Blog</a><a href="projects.html">Projects</a><a href="bits.html">Bits</a><a href="contact.html">Contact</a></div>
+      <p class="copyright">&copy; 2026 Salam. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!-- https://codersblock.com/ npx.cmd serve . -l 5500  cd backend
+node server.js-->
+ 
