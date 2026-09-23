@@ -355,7 +355,7 @@
     padding: 24px;
   }
 
-  .content-section { padding: 75px 0; width: 90%; }
+  .content-section { padding: 15px 0; width: 90%; }
   .blog-grid, .bits-grid, .about-section, .contact-layout { grid-template-columns: 1fr; }
   .bits-section, .contact-section { padding-left: 5%; padding-right: 5%; width: 100%; }
   .contact-section { padding-top: 40px; }
