@@ -203,7 +203,8 @@
   }
 
   .hero_text {
-    width: 100%;    
+    width: 100%;
+    transform: translateX(-20px);
   }
 
   .hero_text h1 {
@@ -228,6 +229,7 @@
   .hero_image {
     width: 100%;
     margin-top: 30px;
+    transform: translateX(20px);
   }
 
   .hero_image img {

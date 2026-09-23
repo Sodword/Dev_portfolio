@@ -324,51 +324,6 @@
   color: #666;
 }
 
-.api-test-section {
-  background: #f1f5f7;
-  border-left: 4px solid #d80b77;
-  border-radius: 8px;
-  font-family: "Poppins", sans-serif;
-  margin: 60px auto 20px;
-  max-width: 900px;
-  padding: 30px;
-  text-align: center;
-}
-
-.api-test-section h2 {
-  color: #2c3e50;
-  margin: 8px 0;
-}
-
-.api-test-section > p:not(.api-test-result) {
-  color: #667477;
-  margin-bottom: 20px;
-}
-
-.api-test-section .primary-button:disabled {
-  cursor: wait;
-  opacity: .7;
-}
-
-.api-test-result {
-  color: #667477;
-  font-size: .9rem;
-  margin-top: 18px;
-  min-height: 24px;
-}
-
-.api-test-success {
-  color: #27845c;
-  font-weight: 600;
-}
-
-.api-test-error {
-  color: #b42318;
-  font-weight: 600;
-}
-
-
-
 /* --- Portfolio Section Styling --- */
 .portfolio-section {
   margin-top: 5%;
@@ -711,6 +666,7 @@
   width: min(1400px, 90%);
   margin: 0 auto;
   padding: 110px;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 

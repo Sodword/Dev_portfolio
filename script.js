@@ -46,30 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     heroObserver.observe(heroSection);
   }
 
-  const apiTestButton = document.querySelector('[data-api-test-button]');
-  const apiTestResult = document.querySelector('[data-api-test-result]');
-  if (apiTestButton && apiTestResult) {
-    apiTestButton.addEventListener('click', async () => {
-      apiTestButton.disabled = true;
-      apiTestResult.className = 'api-test-result';
-      apiTestResult.textContent = 'Loading...';
-
-      try {
-        const response = await fetch('http://localhost:3000/api/test');
-        if (!response.ok) throw new Error(`Request failed with status ${response.status}`);
-
-        const data = await response.json();
-        apiTestResult.classList.add('api-test-success');
-        apiTestResult.textContent = data.message;
-      } catch (error) {
-        apiTestResult.classList.add('api-test-error');
-        apiTestResult.textContent = 'Unable to connect to the API. Please make sure the backend is running.';
-      } finally {
-        apiTestButton.disabled = false;
-      }
-    });
-  }
-
   const whatIDo = document.querySelector('.what-i-do');
   if (whatIDo && 'IntersectionObserver' in window) {
     const whatIDoObserver = new IntersectionObserver(entries => {
