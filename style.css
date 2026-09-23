@@ -141,6 +141,31 @@
   line-height: 80px;
 }
 
+.hero-social-links {
+  display: flex;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.hero-social-links a {
+  align-items: center;
+  background-color: #d80b77;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  font-size: 16px;
+  height: 36px;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color .3s ease, transform .3s ease;
+  width: 36px;
+}
+
+.hero-social-links a:hover {
+  background-color: #d80b77;
+  transform: translateY(-2px) scale(1.06);
+}
+
 .hero_image img {
   width: 70%;
   margin-left: 10%;

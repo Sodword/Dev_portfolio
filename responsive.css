@@ -223,6 +223,11 @@
     display: none;
   }
 
+  .hero-social-links {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+
 
   /* ---------- HERO IMAGE ---------- */
 
