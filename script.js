@@ -164,6 +164,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const bitsEmpty = bitsApp.querySelector('[data-bits-empty]');
     const bitsCategories = ['All', 'CSS', 'JavaScript', 'React', 'Animation', 'UI', 'API', 'Experiment'];
     let bitsCategory = 'All';
+    const bitsCardObserver = 'IntersectionObserver' in window
+      ? new IntersectionObserver(entries => {
+          entries.forEach(entry => entry.target.classList.toggle('is-visible', entry.isIntersecting));
+        }, { threshold: 0.15 })
+      : null;
 
     const bitUrl = slug => `bits.html#bit/${slug}`;
     const bitTags = tags => tags.map(tag => `<span>#${tag}</span>`).join('');
@@ -181,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return `<div class="bit-api-demo"><span class="api-status-dot" aria-hidden="true"></span><div><strong>Connection not configured</strong><p>This Bit is ready for a real endpoint when one is chosen.</p></div><span class="api-state">No request made</span></div>`;
     };
 
-    const cardMarkup = bit => `<article class="bit-card bit-card-interactive reveal-item"><div class="bit-card-preview" data-bit-preview>${preview(bit, true)}</div><div class="bit-card-content"><div class="bit-meta">${bitMeta(bit)}</div><h3>${bit.title}</h3><p>${bit.description}</p><div class="bit-tags">${bitTags(bit.tags)}</div><a class="primary-button" href="${bitUrl(bit.slug)}">View experiment <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div></article>`;
+    const cardMarkup = bit => `<article class="bit-card bit-card-interactive reveal-item"><div class="bit-card-preview" data-bit-preview>${preview(bit, true)}</div><div class="bit-card-content"><div class="bit-meta">${bitMeta(bit)}</div><h3>${bit.title}</h3><p>${bit.description}</p><div class="bit-tags">${bitTags(bit.tags)}</div><a class="primary-button" href="${bitUrl(bit.slug)}"><i class="fa fa-arrow-right" aria-hidden="true"></i> View experiment</a></div></article>`;
 
     const bindPreview = root => {
       if (!root || root.dataset.bound === 'true') return;
@@ -227,7 +232,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const matches = window.bitsExperiments.filter(bit => (bitsCategory === 'All' || bit.category === bitsCategory || bit.tags.includes(bitsCategory)) && [bit.title, bit.description, bit.category, ...bit.tags].join(' ').toLowerCase().includes(query));
       bitsGrid.innerHTML = matches.map(cardMarkup).join('');
       bitsGrid.classList.remove('is-rendered'); window.requestAnimationFrame(() => bitsGrid.classList.add('is-rendered'));
-      bitsGrid.querySelectorAll('[data-bit-preview]').forEach(bindPreview); bitsEmpty.hidden = matches.length > 0;
+      bitsGrid.querySelectorAll('[data-bit-preview]').forEach(bindPreview);
+      bitsGrid.querySelectorAll('.reveal-item').forEach(card => bitsCardObserver ? bitsCardObserver.observe(card) : card.classList.add('is-visible'));
+      bitsEmpty.hidden = matches.length > 0;
     };
     const renderBitDetail = () => {
       const slug = window.location.hash.replace('#bit/', ''); const bit = window.bitsExperiments.find(item => item.slug === slug);
@@ -237,7 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bitsDetail.innerHTML = `<a class="back-link" href="bits.html"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back to Bits</a><div class="bits-detail-header"><span class="section-kicker">${bit.category}</span><h1>${bit.title}</h1><div class="bit-meta">${bitMeta(bit)}</div><div class="bit-tags">${bitTags(bit.tags)}</div></div><div class="bits-detail-layout"><div class="bits-detail-preview">${preview(bit)}</div><div class="bits-detail-copy"><p class="bits-detail-lead">${bit.description}</p><h2>How it works</h2><p>${bit.how}</p><h2>What I learned</h2><p>${bit.learned}</p><h2>Technologies</h2><div class="bit-tags">${bitTags(bit.tags)}</div></div></div><a class="primary-button" href="bits.html"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back to Bits</a>`;
       bindPreview(bitsDetail.querySelector('[data-bit-preview]')); window.scrollTo({ top: 0, behavior: 'smooth' });
     };
-    const featured = window.bitsExperiments[0]; bitsFeatured.innerHTML = `<div class="bits-featured"><div class="bits-featured-copy"><span class="section-kicker">Featured Bit</span><h2>${featured.title}</h2><p>${featured.description}</p><div class="bit-tags">${bitTags(featured.tags)}</div><a class="primary-button" href="${bitUrl(featured.slug)}">View experiment <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div><div class="bits-featured-preview" data-bit-preview>${preview(featured)}</div></div>`;
+    const featured = window.bitsExperiments[0]; bitsFeatured.innerHTML = `<div class="bits-featured"><div class="bits-featured-copy"><span class="section-kicker">Featured Bit</span><h2>${featured.title}</h2><p>${featured.description}</p><div class="bit-tags">${bitTags(featured.tags)}</div><a class="primary-button" href="${bitUrl(featured.slug)}"><i class="fa fa-arrow-right" aria-hidden="true"></i> View experiment</a></div><div class="bits-featured-preview" data-bit-preview>${preview(featured)}</div></div>`;
     bitsSearch.addEventListener('input', renderBits); window.addEventListener('hashchange', renderBitDetail); renderBitsFilters(); renderBits(); bindPreview(bitsFeatured.querySelector('[data-bit-preview]')); renderBitDetail();
   }
 

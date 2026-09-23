@@ -374,6 +374,10 @@
   .bits-featured-preview { min-height: 260px; }
   .bits-toolbar { align-items: flex-start; flex-direction: column; gap: 22px; }
   .bits-search-label, .bits-search-label .content-search { width: 100%; }
+  .bits-filters { padding-top: 3px; width: 100%; }
+  .bits-filter { color: #667477; flex: 0 0 auto; white-space: nowrap; }
+  .bits-filter.is-active { color: #fff; }
+  .bit-card .primary-button { font-size: .78rem; min-height: 44px; padding: 8px 12px; }
   .bits-experiment-view { padding-top: 45px; }
   .bits-detail-header { margin-top: 40px; }
   .bits-detail-layout { gap: 30px; grid-template-columns: 1fr; margin-top: 32px; }

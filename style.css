@@ -758,6 +758,7 @@
 .bits-featured-copy .section-kicker { color: #f5a4cd; }
 .bits-featured-copy h2 { font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.1; margin: 15px 0; }
 .bits-featured-copy p { color: #e7eef0; line-height: 1.8; }
+.bits-featured-copy .primary-button i { margin-left: 0; margin-right: 6px; }
 .bits-featured-preview { align-items: center; background: #d80b77; display: flex; justify-content: center; min-height: 330px; padding: clamp(20px, 4vw, 50px); }
 .bits-toolbar { align-items: end; display: flex; justify-content: space-between; margin-bottom: 25px; }
 .bits-toolbar h2 { color: #34495e; font-size: clamp(1.7rem, 3vw, 2.4rem); margin-top: 8px; }
@@ -769,7 +770,8 @@
 .bit-card-preview { background: #f1f5f7; min-height: 190px; padding: 20px; }
 .bit-card-content { display: flex; flex-direction: column; padding: 25px 30px 30px; }
 .bit-card-content p { flex-grow: 1; }
-.bit-card .primary-button { align-self: flex-start; font-size: .82rem; margin-top: 23px; padding: 9px 13px; }
+.bit-card .primary-button { align-items: center; align-self: flex-start; display: inline-flex; font-size: .82rem; gap: 6px; margin-top: 23px; padding: 9px 13px; }
+.bit-card .primary-button i { font-size: .9em; margin-bottom: 0; margin-left: 0; }
 .bit-meta { color: #d80b77; display: flex; flex-wrap: wrap; font-size: .73rem; font-weight: 700; gap: 10px; text-transform: uppercase; }
 .bit-meta span + span::before { color: #aeb9bb; content: "•"; margin-right: 10px; }
 .bit-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 17px; }
@@ -777,6 +779,8 @@
 .bits-featured .bit-tags span { background: rgba(255,255,255,.13); color: #fff; }
 .bits-grid { transition: opacity .25s ease, transform .25s ease; }
 .bits-grid:not(.is-rendered) { opacity: 0; transform: translateY(8px); }
+.bits-grid .reveal-item:not(.is-visible) { opacity: 0 !important; transform: translateY(60px) !important; }
+.bits-grid .reveal-item.is-visible { opacity: 1 !important; transform: translateY(0) !important; }
 .demo-button { border: 2px solid transparent; border-radius: 5px; cursor: pointer; font: 600 .78rem "Poppins", sans-serif; padding: 9px 12px; transition: transform .2s ease, background .2s ease, color .2s ease; }
 .demo-button:hover { transform: translateY(-2px); }
 .demo-button:focus, .bits-filter:focus, .bit-card a:focus, .bits-detail-preview button:focus { outline: 3px solid rgba(216, 11, 119, .3); outline-offset: 3px; }
